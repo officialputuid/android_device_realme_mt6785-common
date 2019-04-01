@@ -49,6 +49,9 @@ on boot
     # Enable oppo touchpanel direction
     write /proc/touchpanel/oppo_tp_direction 1
 
+    # OTG
+    write /sys/class/power_supply/usb/otg_switch 1
+
 on property:sys.boot_completed=1
     setprop vendor.oppo.biometrics.fingerprint.boot_completed 1
     
