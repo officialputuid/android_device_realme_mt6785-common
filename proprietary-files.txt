@@ -61,4 +61,3 @@ lib/libsource.so|58d7d4db83440354bcb7a94407e370e52fab0623
 bin/kpoc_charger
 etc/init/kpoc_charger.rc
 lib/libshowlogo.so
-lib/libsysenv_system.so

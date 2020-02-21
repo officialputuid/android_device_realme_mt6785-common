@@ -77,6 +77,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl
 
+# KPOC
+PRODUCT_PACKAGES += \
+    libsuspend \
+    android.hardware.health@2.0
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.RMX2001
