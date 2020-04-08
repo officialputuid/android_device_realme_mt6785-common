@@ -56,6 +56,10 @@ PRODUCT_PACKAGES += \
     init.mt6785.rc \
     fstab.mt6785
 
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.RMX2001
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
