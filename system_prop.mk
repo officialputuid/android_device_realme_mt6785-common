@@ -1,5 +1,6 @@
 # Dex2oat
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    dalvik.vm.dex2oat64.enabled=true \
     dalvik.vm.image-dex2oat-filter=quicken \
     dalvik.vm.image-dex2oat-threads=8 \
     dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
