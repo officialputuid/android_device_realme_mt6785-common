@@ -16,5 +16,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.has_wide_color_display=true \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.running_without_sync_framework=true \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
