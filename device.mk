@@ -44,6 +44,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.mt6785:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6785
 
+# Init
+PRODUCT_PACKAGES += \
+    init.mt6785.rc \
+    fstab.mt6785
+
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
