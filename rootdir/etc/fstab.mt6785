@@ -4,15 +4,15 @@
 
 #<src>                                           <mnt_point>           <type>  <mnt_flags and options>                             <fs_mgr_flags>
 # Core Partitions (Dynamic Partitions)
-system                                           /system               ext4    ro                                                  wait,avb=vbmeta_system,logical,first_stage_mount,discard,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
-vendor                                           /vendor               ext4    ro                                                  wait,avb,logical,first_stage_mount,discard
+system                                           /system               ext4    ro                                                  wait,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+vendor                                           /vendor               ext4    ro                                                  wait,avb,logical,first_stage_mount
 oppo_product                                     /oppo_product         ext4    ro                                                  wait,logical,first_stage_mount,nofail
 oppo_engineering                                 /oppo_engineering     ext4    ro                                                  wait,logical,first_stage_mount,nofail
 common_preload                                   /common_preload       ext4    ro                                                  wait,logical,first_stage_mount,nofail
 
 # Core Partitions
-/dev/block/platform/bootdevice/by-name/md_udc    /metadata             ext4    noatime,nosuid,nodev,discard                  wait,formattable,first_stage_mount
-/dev/block/platform/bootdevice/by-name/cache     /cache                ext4    noatime,nosuid,nodev,noauto_da_alloc,discard  wait,check,formattable
+/dev/block/platform/bootdevice/by-name/md_udc    /metadata             ext4    noatime,nosuid,nodev,discard                        wait,formattable,first_stage_mount
+/dev/block/platform/bootdevice/by-name/cache     /cache                ext4    noatime,nosuid,nodev,noauto_da_alloc,discard        wait,check,formattable
 /dev/block/platform/bootdevice/by-name/userdata  /data                 ext4    noatime,nosuid,nodev,noauto_da_alloc,errors=panic,discard wait,check,formattable,quota,reservedsize=128m,resize,checkpoint=block,fileencryption=aes-256-xts
 /dev/block/platform/bootdevice/by-name/recovery  /recovery             emmc    defaults                                            first_stage_mount,nofail
 /dev/block/platform/bootdevice/by-name/boot      /boot                 emmc    defaults                                            first_stage_mount,nofail
@@ -20,7 +20,7 @@ common_preload                                   /common_preload       ext4    r
 /dev/block/platform/bootdevice/by-name/vbmeta_vendor   /vbmeta_vendor  emmc    defaults                                            first_stage_mount,nofail
 /dev/block/platform/bootdevice/by-name/vbmeta_system   /vbmeta_system  emmc    defaults                                            first_stage_mount,nofail,avb=vbmeta
 /dev/block/platform/bootdevice/by-name/vbmeta          /vbmeta         emmc    defaults                                            defaults
-/dev/block/platform/bootdevice/by-name/persist   /mnt/vendor/persist   ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/persist   /mnt/vendor/persist   ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc   wait,check,formattable
 
 # External-Devices (SDCARD | OTG)
 /devices/platform/externdevice*                  auto                  auto    defaults                                            voldmanaged=sdcard1:auto
@@ -44,8 +44,8 @@ common_preload                                   /common_preload       ext4    r
 
 # Non-Volatile (RAM | DATA | CFG)
 /dev/block/platform/bootdevice/by-name/nvram     /nvram                emmc    defaults                                            defaults
-/dev/block/platform/bootdevice/by-name/nvdata    /mnt/vendor/nvdata    ext4    noatime,nosuid,nodev,noauto_da_alloc,discard                       wait,check,formattable
-/dev/block/platform/bootdevice/by-name/nvcfg     /mnt/vendor/nvcfg     ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/nvdata    /mnt/vendor/nvdata    ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/nvcfg     /mnt/vendor/nvcfg     ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc   wait,check,formattable
 
 # Other partitions (Mediatek)
 /dev/block/platform/bootdevice/by-name/lk        /bootloader           emmc    defaults                                            defaults
@@ -60,9 +60,9 @@ common_preload                                   /common_preload       ext4    r
 /dev/block/platform/bootdevice/by-name/proinfo   /proinfo              emmc    defaults                                            defaults
 
 # Other partitions (OPPO | Realme)
-/dev/block/platform/bootdevice/by-name/my_custom       /my_custom              ext4 ro                                                                       wait,nofail
-/dev/block/platform/bootdevice/by-name/special_preload /special_preload        ext4 ro                                                                       wait,nofail
-/dev/block/platform/bootdevice/by-name/opporeserve2    /mnt/vendor/opporeserve ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/my_custom       /my_custom              ext4 ro                                             wait,nofail
+/dev/block/platform/bootdevice/by-name/special_preload /special_preload        ext4 ro                                             wait,nofail
+/dev/block/platform/bootdevice/by-name/opporeserve2    /mnt/vendor/opporeserve ext4 noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc   wait,check,formattable
 /dev/block/platform/bootdevice/by-name/otp       /otp                  emmc    defaults                                            defaults
 
 # System Control Processor (SCP)
@@ -70,8 +70,8 @@ common_preload                                   /common_preload       ext4    r
 /dev/block/platform/bootdevice/by-name/scp2      /scp2                 emmc    defaults                                            defaults
 
 # Subscriber Identification Module (SIM)
-/dev/block/platform/bootdevice/by-name/protect1  /mnt/vendor/protect_f ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
-/dev/block/platform/bootdevice/by-name/protect2  /mnt/vendor/protect_s ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc,discard   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/protect1  /mnt/vendor/protect_f ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc   wait,check,formattable
+/dev/block/platform/bootdevice/by-name/protect2  /mnt/vendor/protect_s ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc   wait,check,formattable
 
 # Trusted Execution Environment (TEE)
 /dev/block/platform/bootdevice/by-name/tee1      /tee1                 emmc    defaults                                            defaults
