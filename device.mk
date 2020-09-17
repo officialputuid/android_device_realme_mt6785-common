@@ -49,6 +49,10 @@ PRODUCT_PACKAGES += \
     init.mt6785.rc \
     fstab.mt6785
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay
+
 # Screen density
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
