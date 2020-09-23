@@ -28,6 +28,9 @@ $(call inherit-product, vendor/realme/RMX2001/RMX2001-vendor.mk)
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 29
+
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
