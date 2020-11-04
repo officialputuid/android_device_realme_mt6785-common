@@ -39,6 +39,8 @@ on post-fs-data
     chmod 0600 /sys/bus/platform/devices/fpc_interrupt/irq
     chmod 0660 /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
 
+    # Services
+    setprop init.svc.console stopped
 on boot
     # Set permission for Goodix FP
     chown system system /dev/goodix_fp
