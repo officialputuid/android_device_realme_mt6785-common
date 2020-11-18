@@ -68,6 +68,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/vendor_override_manifest.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/vintf/manifest/vendor_override_manifest.xml
 
+# ImsInit hack
+PRODUCT_PACKAGES += \
+    ImsInit
+
 # Init
 PRODUCT_PACKAGES += \
     init.mt6785.rc \
