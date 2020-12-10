@@ -12,4 +12,4 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Surfaceflinger
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-	debug.sf.latch_unsignaled=1
+    debug.sf.latch_unsignaled=1

@@ -96,9 +96,6 @@ BOARD_SUPER_PARTITION_GROUPS := main
 BOARD_MAIN_SIZE := 5080969216
 BOARD_MAIN_PARTITION_LIST := system
 
-# Properties
--include $(DEVICE_PATH)/system_prop.mk
-
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6785
