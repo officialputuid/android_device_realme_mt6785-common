@@ -22,6 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
+# Call proprietary blob setup
+$(call inherit-product, vendor/realme/RMX2001/RMX2001-vendor.mk)
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
