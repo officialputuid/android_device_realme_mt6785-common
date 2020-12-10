@@ -5,8 +5,3 @@ service fps_hal.RMX2001 /system/bin/hw/android.hardware.biometrics.fingerprint@2
     class late_start
     user system
     group system input uhid
-
-service oppo_fingerprints_sh /vendor/bin/sh /vendor/bin/init.oppo.fingerprints.sh
-    class main
-    user root
-    oneshot
