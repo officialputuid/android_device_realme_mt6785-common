@@ -43,6 +43,9 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 TARGET_BOOTLOADER_BOARD_NAME := oppo6785
 TARGET_NO_BOOTLOADER := true
 
+# Build system
+BUILD_BROKEN_DUP_RULES := true
+
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
