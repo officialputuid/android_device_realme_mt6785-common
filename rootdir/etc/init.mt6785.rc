@@ -45,6 +45,9 @@ on boot
 
 on property:sys.boot_completed=1
     setprop vendor.oppo.biometrics.fingerprint.boot_completed 1
+    
+    # ZRAM
+    swapon_all /vendor/fstab.enableswap
 
 service oppo_fingerprints_sh /vendor/bin/sh /vendor/bin/init.oppo.fingerprints.sh
     class main
