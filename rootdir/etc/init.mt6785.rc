@@ -62,7 +62,3 @@ service oppo_fingerprints_sh /vendor/bin/sh /vendor/bin/init.oppo.fingerprints.s
     class main
     user root
     oneshot
-
-service face_hal /system/bin/true
-    oneshot
-    disabled

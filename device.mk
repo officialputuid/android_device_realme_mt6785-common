@@ -65,6 +65,9 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhwbinder
 
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/vendor_override_manifest.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/vintf/manifest/vendor_override_manifest.xml
+
 # Init
 PRODUCT_PACKAGES += \
     init.mt6785.rc \
@@ -105,6 +108,10 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+
+# Vendor Services - DISABLED
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/placeholder:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/init/vendor.oppo.hardware.biometrics.face@1.0-service.rc
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
