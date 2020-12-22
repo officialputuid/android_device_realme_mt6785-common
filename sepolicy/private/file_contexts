@@ -1,3 +1,6 @@
+# Kernel Power Off Charging (KPOC)
+/system/bin/kpoc_charger u:object_r:kpoc_charger_exec:s0
+
 # VoLTE
 /system/bin/vtservice           u:object_r:vtservice_exec:s0
 

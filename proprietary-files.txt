@@ -48,3 +48,9 @@ lib/libimsma_socketwrapper.so|0c10293b6a75ddfa1ac57dee5badb6cdbb8a0e87
 lib/libsignal.so|995894c58d09f9818737b57943db8099d38a8f46
 lib/libsink.so|e9f4758b525759e2301de563498d5f6aca24072e
 lib/libsource.so|58d7d4db83440354bcb7a94407e370e52fab0623
+
+# Kernel Power Off Charging (KPOC)
+bin/kpoc_charger
+etc/init/kpoc_charger.rc
+lib/libshowlogo.so
+lib/libsysenv_system.so
