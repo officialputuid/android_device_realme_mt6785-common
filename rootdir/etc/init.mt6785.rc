@@ -62,3 +62,7 @@ service oppo_fingerprints_sh /vendor/bin/sh /vendor/bin/init.oppo.fingerprints.s
     class main
     user root
     oneshot
+
+# Disable AOSP RIL if MTK RIL is up
+on property:vendor.ril.mtk=1
+    stop vendor.ril-daemon
