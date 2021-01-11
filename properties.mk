@@ -23,6 +23,14 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1
 
+# NFC
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.nfc.disPowerSave=1 \
+    persist.sys.nfc.default=on \
+    persist.sys.nfc.aid_overflow=true \
+    ro.product.cuptsm=OPPO|ESE|01|02 \
+    persist.sys.nfc.antenna_area=bottom
+
 # OMX
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
