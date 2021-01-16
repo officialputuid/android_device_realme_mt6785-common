@@ -23,6 +23,12 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1
 
+# LMKD
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.lmk.psi_complete_stall_ms=150 \
+    ro.lmk.swap_free_low_percentage=20 \
+    ro.lmk.kill_timeout_ms=100
+
 # NFC
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.nfc.disPowerSave=1 \
