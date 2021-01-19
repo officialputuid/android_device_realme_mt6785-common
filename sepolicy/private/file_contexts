@@ -1,6 +1,9 @@
 # Kernel Power Off Charging (KPOC)
 /system/bin/kpoc_charger u:object_r:kpoc_charger_exec:s0
 
+# HALs
+/system/bin/hw/android\.hardware\.light@2\.0-service\.RMX2001    u:object_r:hal_light_default_exec:s0
+
 # VoLTE
 /system/bin/vtservice           u:object_r:vtservice_exec:s0
 
