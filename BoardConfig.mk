@@ -50,6 +50,9 @@ TARGET_NO_BOOTLOADER := true
 # Build system
 BUILD_BROKEN_DUP_RULES := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
