@@ -28,6 +28,14 @@ on property:sys.boot_completed=1
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
 
+service aee_aedv /system/bin/true
+    oneshot
+    disabled
+
+service aee_aedv64 /system/bin/true
+    oneshot
+    disabled
+
 # Performance profiles
 on property:persist.perf_profile=0
     exec - root -- /system/bin/perf_profile.sh 0
