@@ -12,8 +12,10 @@ lib64/libaptXHD_encoder.so
 lib/libem_support_jni.so
 lib64/libem_support_jni.so
 
-# HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk
+# HotwordEnrollment - from RMX2001_11_C.01
+-my_product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4.apk:product/priv-app/HotwordEnrollmentOKGoogleCORTEXM4/HotwordEnrollmentOKGoogleCORTEXM4.apk|ce1f391fcea52e0c48ee3afedb8d6ae52d214ae8
+-my_product/framework/com.android.hotwordenrollment.common.util.jar:system_ext/framework/com.android.hotwordenrollment.common.util.jar|714382db8d12aca9f5388dd72060e867e30d88e4
+my_product/etc/permissions/com.android.hotwordenrollment.common.util.xml:system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|d842a6539f8a9201b329898c07f69ef8a953ee6f
 
 # IMS
 -framework/mediatek-common.jar
