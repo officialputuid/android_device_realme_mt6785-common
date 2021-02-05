@@ -3,4 +3,8 @@
         <name>vendor.oppo.hardware.biometrics.face</name>
         <transport>hwbinder</transport>
     </hal>
+    <hal format="hidl" override="true">
+        <name>android.hardware.soundtrigger</name>
+        <transport>hwbinder</transport>
+    </hal>
 </manifest>
