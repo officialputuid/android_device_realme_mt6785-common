@@ -1,2 +1,5 @@
 # Allow init to mount vendor overlay
 allow init vendor_overlay_file:dir mounton;
+
+# Allow init to write touchpanel nodes
+allow init proc_tp:file rw_file_perms;
