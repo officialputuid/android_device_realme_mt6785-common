@@ -18,7 +18,7 @@
 
 set -e
 
-export DEVICE=RMX2001
+export DEVICE_COMMON=mt6785-common
 export VENDOR=realme
 
 # Load extract_utils and do some sanity checks
@@ -71,10 +71,14 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+# Initialize the helper for common device
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true $CLEAN_VENDOR
+
+extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
+
 # Initialize the helper for device
 setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" true "${CLEAN_VENDOR}"
 
-extract "${MY_DIR}/proprietary-files.txt" "${SRC}" \
-        "${KANG}" --section "${SECTION}"
+extract "$MY_DIR"/../$DEVICE/proprietary-files.txt "$SRC" "$SECTION"
 
 "${MY_DIR}/setup-makefiles.sh"

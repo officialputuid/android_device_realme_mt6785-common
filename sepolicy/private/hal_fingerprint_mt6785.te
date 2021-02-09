@@ -1,0 +1,6 @@
+type hal_fingerprint_mt6785, coredomain, domain;
+hal_client_domain(hal_fingerprint_mt6785, hal_fingerprint)
+hal_server_domain(hal_fingerprint_mt6785, hal_fingerprint)
+
+type hal_fingerprint_mt6785_exec, system_file_type, exec_type, file_type;
+init_daemon_domain(hal_fingerprint_mt6785)
