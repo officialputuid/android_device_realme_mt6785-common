@@ -1,0 +1,3 @@
+# Allow system_app to write touchpanel nodes
+allow system_app proc_tp:dir search;
+allow system_app proc_tp:file rw_file_perms;
