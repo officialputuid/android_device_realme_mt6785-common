@@ -17,28 +17,10 @@ on post-fs-data
     chmod 0666 /dev/video0
     chmod 0666 /dev/video1
 
-    # Create Goodix FP related directories
-    mkdir /data/gf_data 0700 system system
-    mkdir /data/system/gf_data 0700 system system
-    mkdir /data/images 0700 system system
-
-    # Set permissions for FPC FP
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/clk_enable
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/wakelock_enable
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq_enable
-    chown system  system /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/irq_enable
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/clk_enable
-    chmod 0200 /sys/bus/platform/devices/fpc_interrupt/wakelock_enable
-    chmod 0600 /sys/bus/platform/devices/fpc_interrupt/irq
-    chmod 0660 /sys/bus/platform/devices/fpc_interrupt/irq_unexpected
-
     # Services
     setprop init.svc.console stopped
+
 on boot
-    # Set permission for Goodix FP
-    chown system system /dev/goodix_fp
 
     # Disable edge limit control interface
     write /proc/touchpanel/oppo_tp_limit_enable 0
@@ -50,15 +32,8 @@ on boot
     write /sys/class/power_supply/usb/otg_switch 1
 
 on property:sys.boot_completed=1
-    setprop vendor.oppo.biometrics.fingerprint.boot_completed 1
-    
     # ZRAM
     swapon_all /vendor/fstab.enableswap
-
-service oppo_fingerprints_sh /vendor/bin/sh /vendor/bin/init.oppo.fingerprints.sh
-    class main
-    user root
-    oneshot
 
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
