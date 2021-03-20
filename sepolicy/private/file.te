@@ -1,2 +1,3 @@
 type debugfs_ion, fs_type, debugfs_type;
 type proc_tp, fs_type, proc_type;
+type sysfs_battery_supply, sysfs_type, fs_type;
