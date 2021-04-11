@@ -18,7 +18,7 @@ on post-fs-data
     chmod 0666 /dev/video1
 
     # Services
-    setprop init.svc.console stopped
+    stop console
 
 on property:sys.boot_completed=1
     # ZRAM
