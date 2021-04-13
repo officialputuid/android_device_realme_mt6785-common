@@ -63,6 +63,3 @@ lib/libsource.so|58d7d4db83440354bcb7a94407e370e52fab0623
 bin/kpoc_charger
 etc/init/kpoc_charger.rc
 lib/libshowlogo.so
-
-# Media - from RMX2001_11_B.49
-vendor/lib/libvpud_vcodec.so:product/vendor_overlay/29/lib/libvpud_vcodec.so|a040fa35b7f4eef98197e2fded6fc71018408a8a
