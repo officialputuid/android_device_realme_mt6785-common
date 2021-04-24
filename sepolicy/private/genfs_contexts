@@ -1,2 +1,3 @@
+genfscon proc  /gpufreq     u:object_r:proc_gpufreq:s0
 genfscon proc  /touchpanel  u:object_r:proc_tp:s0
 genfscon sysfs /module/primary_display/parameters u:object_r:sysfs_fps:s0
