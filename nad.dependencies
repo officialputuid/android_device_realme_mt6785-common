@@ -1,8 +1,8 @@
 [
   {
-    "repository" : "SamarV-121/proprietary_vendor_realme",
+    "repository" : "officialputuid/proprietary_vendor_realme",
     "target_path": "vendor/realme",
-    "branch"     : "lineage-18.1"
+    "branch"     : "eleven"
   },
   {
     "repository" : "PixelExperience/vendor_mediatek_interfaces",
