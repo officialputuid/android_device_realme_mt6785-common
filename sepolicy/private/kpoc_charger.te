@@ -7,3 +7,6 @@ typeattribute kpoc_charger coredomain;
 init_daemon_domain(kpoc_charger)
 
 permissive kpoc_charger;
+
+# Allow kpoc_charger to access hal_light
+hal_client_domain(kpoc_charger, hal_light)
