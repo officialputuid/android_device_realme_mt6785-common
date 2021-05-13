@@ -52,6 +52,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.mtk_perf_fast_start_win=1 \
     ro.mtk_perf_response_time=1
 
+# Privapp permissions whitelisting
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log
+
 # Surfaceflinger
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.disable_hwc_vds=1 \
