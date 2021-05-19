@@ -34,6 +34,7 @@ $(call inherit-product, vendor/mediatek/ims/mtk-engi.mk)
 # Parts
 $(call inherit-product-if-exists, packages/apps/RealmeParts/parts.mk)
 
+# Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
 # VNDK
@@ -94,8 +95,6 @@ PRODUCT_PACKAGES += \
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/idc/mtk-kpd.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/mtk-kpd.idc \
-    $(COMMON_PATH)/keylayout/mtk-kpd.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/mtk-kpd.kl \
     $(COMMON_PATH)/keylayout/touchpanel.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/touchpanel.kl
 
 # KPOC
