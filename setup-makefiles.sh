@@ -51,6 +51,9 @@ write_footers
 # Initialize the helper for device
 setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
 
+# Copyright headers and common guards
+write_headers
+
 # The standard blobs
 write_makefiles "$MY_DIR"/../$DEVICE/proprietary-files.txt true
 
