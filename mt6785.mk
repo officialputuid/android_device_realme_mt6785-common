@@ -114,6 +114,10 @@ PRODUCT_COPY_FILES += \
 -include $(COMMON_PATH)/properties.mk
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# Recovery
+PRODUCT_PACKAGES += \
+    init.recovery.mt6785.rc
+
 # RcsService
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
