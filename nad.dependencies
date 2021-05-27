@@ -5,6 +5,11 @@
     "branch"     : "eleven"
   },
   {
+    "repository" : "officialputuid/android_kernel_realme_mt6785",
+    "target_path": "kernel/realme/mt6785",
+    "branch"     : "eleven"
+  },
+  {
     "repository" : "PixelExperience/vendor_mediatek_interfaces",
     "target_path": "vendor/mediatek/interfaces",
     "branch"     : "eleven"
@@ -13,5 +18,11 @@
     "repository" : "PixelExperience/vendor_mediatek_ims",
     "target_path": "vendor/mediatek/ims",
     "branch"     : "eleven"
+  },
+  {
+  "remote"       : "priv",
+  "repository"   : "android_packages_apps_NusantaraPapers",
+  "target_path"  : "packages/apps/NusantaraPapers",
+  "branch"       : "11"
   }
 ]

@@ -76,9 +76,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/vendor_override_manifest.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/vintf/manifest/vendor_override_manifest.xml
 
-# GCam Go
+# Apps
 PRODUCT_PACKAGES += \
-    GCam
+    GCam \
+    NusantaraPapers
 
 # ImsInit hack
 PRODUCT_PACKAGES += \
