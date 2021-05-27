@@ -5,6 +5,11 @@
     "branch"     : "eleven"
   },
   {
+    "repository" : "officialputuid/android_kernel_realme_mt6785",
+    "target_path": "kernel/realme/mt6785",
+    "branch"     : "eleven"
+  },
+  {
     "repository" : "PixelExperience/vendor_mediatek_interfaces",
     "target_path": "vendor/mediatek/interfaces",
     "branch"     : "eleven"
