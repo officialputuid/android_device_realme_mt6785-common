@@ -130,7 +130,8 @@ PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
 # Symbols
 PRODUCT_PACKAGES += \
-    libshim_showlogo
+    libshim_showlogo \
+    libshim_vtservice
 
 # Telephony Jars
 PRODUCT_BOOT_JARS += \
