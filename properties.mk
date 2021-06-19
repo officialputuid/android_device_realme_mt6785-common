@@ -72,6 +72,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
+# Privapp permissions whitelisting
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.control_privapp_permissions=log
+
 # ZRAM
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.zram.mark_idle_delay_mins=60 \
