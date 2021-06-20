@@ -17,13 +17,6 @@
 import common
 import re
 
-def FullOTA_Assertions(info):
-  info.script.AppendExtra('ifelse(is_mounted("/vendor"), unmount("/vendor"));');
-  info.script.AppendExtra('run_program("/system/bin/mount", "/dev/block/mapper/vendor", "/vendor");');
-  info.script.AppendExtra('ifelse(file_getprop("/vendor/build.prop","ro.vendor.build.version.sdk") != "29", unmount("/vendor");');
-  info.script.AppendExtra('abort("Incompatible firmware has been detected, kindly use Android-10/RealmeUI-1.0 firmware"););');
-  info.script.AppendExtra('unmount("/vendor");');
-
 def FullOTA_InstallEnd(info):
   OTA_InstallEnd(info)
   return
