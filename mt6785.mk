@@ -54,7 +54,8 @@ PRODUCT_COPY_FILES += \
 # Prebuilt Apps
 PRODUCT_PACKAGES += \
     CameraGo \
-    ViaBrowser
+    ViaBrowser \
+    AudioREC
 
 # fastbootd
 PRODUCT_PACKAGES += \
