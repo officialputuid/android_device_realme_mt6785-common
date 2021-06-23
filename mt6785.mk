@@ -55,7 +55,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     CameraGo \
     ViaBrowser \
-    AudioREC
+    AudioREC \
+    ScreenREC
 
 # fastbootd
 PRODUCT_PACKAGES += \
