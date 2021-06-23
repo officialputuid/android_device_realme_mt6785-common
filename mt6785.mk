@@ -56,7 +56,8 @@ PRODUCT_PACKAGES += \
     CameraGo \
     ViaBrowser \
     AudioREC \
-    ScreenREC
+    ScreenREC \
+    OtoMusic
 
 # fastbootd
 PRODUCT_PACKAGES += \
