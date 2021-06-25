@@ -1,0 +1,3 @@
+# FPS Info
+allow platform_app sysfs_fps:dir search;
+allow platform_app sysfs_fps:file rw_file_perms;
