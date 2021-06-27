@@ -1,3 +1,6 @@
+on init
+    setprop sys.usb.configfs 1
+
 service init-recovery-mt6785-sh /init.recovery.mt6785.sh
     user root
     group root
