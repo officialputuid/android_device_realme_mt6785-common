@@ -131,10 +131,12 @@ void vendor_load_properties() {
         else if (Trim(operator_name) == "143") {
             device = "RMX2161L1";
             model = "RMX2161";
+            property_override("ro.power_profile", "RMX2161");
         }
         else if (Trim(operator_name) == "147" || Trim(operator_name) == "145") {
             device = "RMX2163L1";
             model = "RMX2163";
+            property_override("ro.power_profile", "RMX2161");
         }
     }
     else {
