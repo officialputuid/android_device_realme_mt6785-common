@@ -25,6 +25,9 @@ vendor                                           /vendor               ext4    r
 /dev/block/platform/bootdevice/by-name/protect1  /mnt/vendor/protect_f ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc   wait,check,formattable
 /dev/block/platform/bootdevice/by-name/protect2  /mnt/vendor/protect_s ext4    noatime,nosuid,nodev,noauto_da_alloc,commit=1,nodelalloc   wait,check,formattable
 
+# Misc
+/dev/block/platform/bootdevice/by-name/misc      /misc                 emmc    defaults                                            defaults
+
 # External-Devices (SDCARD | OTG)
 /devices/platform/externdevice*                  auto                  auto    defaults                                            voldmanaged=sdcard1:auto
 /devices/platform/11200000.usb3_xhci*            auto                  vfat    defaults                                            voldmanaged=usbotg:auto
