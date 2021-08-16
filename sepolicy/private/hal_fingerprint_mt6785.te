@@ -1,4 +1,5 @@
 type hal_fingerprint_mt6785, domain;
+typeattribute hal_fingerprint_mt6785 data_between_core_and_vendor_violators;
 hal_client_domain(hal_fingerprint_mt6785, hal_fingerprint)
 hal_server_domain(hal_fingerprint_mt6785, hal_fingerprint)
 
