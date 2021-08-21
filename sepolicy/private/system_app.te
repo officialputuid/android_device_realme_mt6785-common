@@ -11,3 +11,6 @@ set_prop(system_app, perf_prop)
 # Allow system_app to read fps info node
 allow system_app sysfs_fps:dir search;
 allow system_app sysfs_fps:file r_file_perms;
+
+# Battery Health
+r_dir_file(system_app, sysfs_battery_supply)
