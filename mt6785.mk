@@ -133,10 +133,6 @@ PRODUCT_PACKAGES += \
     PresencePolling \
     RcsService
 
-# Screen density
-PRODUCT_AAPT_CONFIG := xxxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 
