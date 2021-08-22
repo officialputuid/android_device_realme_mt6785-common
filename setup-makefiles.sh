@@ -27,9 +27,9 @@ INITIAL_COPYRIGHT_YEAR=2020
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-LINEAGE_ROOT="${MY_DIR}/../../.."
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-HELPER="${LINEAGE_ROOT}/tools/extract-utils/extract_utils.sh"
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -37,7 +37,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common device
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$ANDROID_ROOT" true
 
 # Copyright headers and common guards
 write_headers "RMX2001 RMX2151"
@@ -49,7 +49,7 @@ write_makefiles "$MY_DIR"/proprietary-files.txt true
 write_footers
 
 # Initialize the helper for device
-setup_vendor "${DEVICE}" "${VENDOR}" "${LINEAGE_ROOT}" false
+setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
 
 # Copyright headers and common guards
 write_headers
