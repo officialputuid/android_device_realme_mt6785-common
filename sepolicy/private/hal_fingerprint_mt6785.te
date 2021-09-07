@@ -1,4 +1,4 @@
-type hal_fingerprint_mt6785, coredomain, domain;
+type hal_fingerprint_mt6785, domain;
 hal_client_domain(hal_fingerprint_mt6785, hal_fingerprint)
 hal_server_domain(hal_fingerprint_mt6785, hal_fingerprint)
 
