@@ -27,6 +27,7 @@ vendor                                           /vendor               ext4    r
 
 # Misc
 /dev/block/platform/bootdevice/by-name/misc      /misc                 emmc    defaults                                            defaults
+/dev/block/platform/bootdevice/by-name/logo      /logo                 emmc    defaults                                            defaults
 
 # External-Devices (SDCARD | OTG)
 /devices/platform/externdevice*                  auto                  auto    defaults                                            voldmanaged=sdcard1:auto
