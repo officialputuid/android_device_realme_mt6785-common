@@ -18,6 +18,7 @@ COMMON_PATH := device/realme/mt6785-common
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6785
+TARGET_BOARD_PLATFORM_GPU := mali-g76mc4
 
 # Architecture
 TARGET_ARCH := arm64
