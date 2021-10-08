@@ -19,4 +19,16 @@ void _ZN7android14SurfaceControlD0Ev(void);
 void _ZN7android14SurfaceControl7releaseEv(void) {
   _ZN7android14SurfaceControlD0Ev();
  }
+
+void _ZN7android21SurfaceComposerClient20getStaticDisplayInfoERKNS_2spINS_7IBinderEEEPNS_2ui17StaticDisplayInfoE(void);
+
+void _ZN7android21SurfaceComposerClient14getDisplayInfoERKNS_2spINS_7IBinderEEEPNS_11DisplayInfoE(void) {
+  _ZN7android21SurfaceComposerClient20getStaticDisplayInfoERKNS_2spINS_7IBinderEEEPNS_2ui17StaticDisplayInfoE();
+ }
+
+void _ZN7android14SurfaceControl10getSurfaceEv(void);
+
+void _ZNK7android14SurfaceControl10getSurfaceEv(void) {
+  _ZN7android14SurfaceControl10getSurfaceEv();
+ }
 }
