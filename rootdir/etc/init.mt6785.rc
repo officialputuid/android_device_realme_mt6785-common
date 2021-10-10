@@ -24,6 +24,10 @@ on property:sys.boot_completed=1
     # ZRAM
     swapon_all /vendor/fstab.enableswap
 
+    # Touchpanel
+    write /proc/touchpanel/oppo_tp_limit_enable 0
+    write /proc/touchpanel/oppo_tp_direction 1
+
 # Disable AOSP RIL if MTK RIL is up
 on property:vendor.ril.mtk=1
     stop vendor.ril-daemon
