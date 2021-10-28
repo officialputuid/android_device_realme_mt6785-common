@@ -66,6 +66,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
+# SoC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=MediaTek \
+    ro.soc.model=MT6785
+
 # Surfaceflinger
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.latch_unsignaled=1 \
