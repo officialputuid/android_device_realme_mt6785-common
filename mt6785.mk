@@ -121,7 +121,8 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt apps
 PRODUCT_PACKAGES += \
-    OpenCamera
+    OpenCamera \
+    PowerMenuControls
 
 # Properties
 -include $(COMMON_PATH)/properties.mk
