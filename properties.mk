@@ -66,6 +66,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
+# Radio
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.sys.fflag.override.settings_provider_model=false
+
 # SoC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=MediaTek \
