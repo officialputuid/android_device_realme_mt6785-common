@@ -71,6 +71,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.soc.manufacturer=MediaTek \
     ro.soc.model=MT6785
 
+# Supported AOSP Feature
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.support_one_handed_mode=true
+
 # Surfaceflinger
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     debug.sf.latch_unsignaled=1 \
