@@ -22,6 +22,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     drm.service.enabled=true \
     ro.vendor.mtk_widevine_drm_l1_support=1
 
+# Fingerprint
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    fingerprint.nocleanup=true
+
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
