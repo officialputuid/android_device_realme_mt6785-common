@@ -89,6 +89,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
+# System
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.binary_xml=false
+
 # ZRAM
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.zram.first_wb_delay_mins=1440 \
