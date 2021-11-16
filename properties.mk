@@ -13,18 +13,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
     dalvik.vm.isa.arm.variant=cortex-a76 \
     dalvik.vm.isa.arm64.variant=cortex-a76
 
-# Dex2oat
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-    dalvik.vm.boot-dex2oat-threads=8 \
-    dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-    dalvik.vm.dex2oat-filter=quicken \
-    dalvik.vm.dex2oat-threads=8 \
-    dalvik.vm.dex2oat64.enabled=true \
-    dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
-    dalvik.vm.image-dex2oat-filter=quicken \
-    dalvik.vm.image-dex2oat-threads=8
-
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.lcd_density=420
