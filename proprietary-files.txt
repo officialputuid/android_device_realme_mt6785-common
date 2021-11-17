@@ -18,18 +18,9 @@ lib64/libem_support_jni.so
 my_product/etc/permissions/com.android.hotwordenrollment.common.util.xml:system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml|d842a6539f8a9201b329898c07f69ef8a953ee6f
 
 # IMS
--framework/mediatek-common.jar
--framework/mediatek-framework.jar
--framework/mediatek-ims-base.jar
--framework/mediatek-ims-common.jar
--framework/mediatek-telecom-common.jar
--framework/mediatek-telephony-base.jar
--framework/mediatek-telephony-common.jar
 -priv-app/ImsService/ImsService.apk
 bin/vtservice
 etc/init/init.vtservice.rc
-framework/mediatek-ims-extension-plugin.jar
-framework/mediatek-ims-legacy.jar
 lib/libmtk_vt_service.so
 lib/libmtk_vt_wrapper.so
 lib/libmtkaudio_utils.so

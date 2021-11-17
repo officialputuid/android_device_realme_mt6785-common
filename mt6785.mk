@@ -31,6 +31,9 @@ $(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
 # realme Parts
 $(call inherit-product-if-exists, packages/apps/RealmeParts/parts.mk)
 
+# MTK Jars (for IMS)
+$(call inherit-product, vendor/mtk-ims/mtk-ims-vendor.mk)
+
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
@@ -145,20 +148,6 @@ PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
 PRODUCT_PACKAGES += \
     libshim_showlogo \
     libshim_vtservice
-
-# Telephony
-# PRODUCT_BOOT_JARS += \
-    ImsServiceBase \
-    mediatek-common \
-    mediatek-framework \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
-
-PRODUCT_PACKAGES += \
-    ImsServiceBase
 
 # Vendor Services - DISABLED
 PRODUCT_COPY_FILES += \
